@@ -6,7 +6,7 @@
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="2e5e653b-c53c-4855-926d-8446f676f44c" >
-		<http:listener-connection host="0.0.0.0" port="9094" />
+		<http:listener-connection host="0.0.0.0" port="9098" />
 	</http:listener-config>
 	<flow name="testing-mulestandalone-localFlow" doc:id="f8f424bb-064d-450f-9353-66cd8cce7b4b" >
 		<http:listener doc:name="Listener" doc:id="9dec5cc6-d35a-442f-acc8-195aad698d62" config-ref="HTTP_Listener_config" path="/testStandalone"/>
