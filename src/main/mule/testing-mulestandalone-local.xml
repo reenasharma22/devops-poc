@@ -11,6 +11,16 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	<flow name="testing-mulestandalone-localFlow" doc:id="f8f424bb-064d-450f-9353-66cd8cce7b4b" >
 		<http:listener doc:name="Listener" doc:id="9dec5cc6-d35a-442f-acc8-195aad698d62" config-ref="HTTP_Listener_config" path="/testStandalone"/>
 		<set-payload value='#["Hello mulestandalone 4.1"]' doc:name="Set Payload" doc:id="2cfff466-0c64-4765-bd26-6fe942485fb9" />
+		<ee:transform doc:name="Transform Message" doc:id="95cc6066-f555-4e33-bc73-c8bb4e98ab3d" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+
+"response":	"hello"
+]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
 		<logger level="INFO" doc:name="Logger" doc:id="7ac8f0e6-c2c6-4a41-93ea-454a504aeea2" />
 	</flow>
 </mule>
