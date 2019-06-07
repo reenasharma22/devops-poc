@@ -8,7 +8,7 @@ pipeline {
     }  
     stage('Deploy CloudHub') {
       steps {
-        bat 'mvn deploy -P cloudhub -Dmule.version=4.1.5 -Danypoint.username=reena220786 -Danypoint.password=Sharma22@'
+        bat 'mvn deploy -DmuleDeploy -Dcloud.env=Sandbox -Danypoint.businessGroup=public -Dcloudhub.workerType=Small -DcloudhubAppName=firstapplication4 -Dmule.version=4.1.5 -Dcloud.user=reena220786 -Dcloud.password=Sharma22@'
       }
     }
   }
