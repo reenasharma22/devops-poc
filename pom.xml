@@ -19,32 +19,15 @@
 	</properties>
 
 	<build>
-		<plugins>			
+		<plugins>
 			<plugin>
-                <groupId>org.mule.tools.maven</groupId>
-                <artifactId>mule-maven-plugin</artifactId>
-                <version>@project.version@</version>
-                <extensions>true</extensions>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>cloudhub-deploy</goal>
-                        </goals>
-                         <configuration>
-          <deploymentType>cloudhub</deploymentType>
-          <muleVersion>4.1.5</muleVersion> 
-          <username>reena220786</username> 
-          <password>Sharma22@</password> 
-          <applicationName>testApptest</applicationName>
-          <environment>Sandbox</environment> 
-          <businessGroup>PublicBiz</businessGroup>
-          <uri>https://anypoint.mulesoft.com</uri> 
-          <workerType>Small</workerType>
-        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-maven-plugin</artifactId>
+				<version>${mule.maven.plugin.version}</version>
+				<extensions>true</extensions>
+				<configuration>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
